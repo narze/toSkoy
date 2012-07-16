@@ -36,9 +36,28 @@ function has(str) {
   return !!db[str]
 }
 
+var karans = 'ห์,ษ์,ซ์,บ์,ป์,ฌ์'.split(',')
+function karan() {
+  return karans[Math.floor(Math.random() * karans.length)]
+}
+
 function get(str) {
   var c = db[str]
-  return c[Math.floor(Math.random() * c.length)]
+    , result = c[Math.floor(Math.random() * c.length)]
+    , endingPattern = /[ก-ฮ]$/
+  if (result.length > 1) {
+    if (result.match(endingPattern)) {
+      result = result.replace(endingPattern, function(a) {
+        var random = Math.random()
+        if (random < 0.2) return karan() + a
+        if (random < 0.3) return a + karan()
+        return a
+      })
+    }
+  }
+  return result
+}
+
 function learnShift(from, to) {
   learnWord(from, from)
   learnWord(from, to)
