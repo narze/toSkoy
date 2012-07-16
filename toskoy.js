@@ -16,6 +16,15 @@ var skoyChar = {
   'ฉ': 'ช๋'
 }
 
+var skoyWord = {
+  'หนุ': 'นุ๊วซ์',
+  'อยาก': 'ญั๊ข',
+  'คะ': 'ขร๊',
+  'ค่ะ': 'ฆร่',
+  'ัน': 'ัล',
+  'วก': '๊ก'
+}
+
 String.prototype.toSkoy = function () {
   var skoy = ''
   for (var i = 0 ; i < this.length ; i++) {
