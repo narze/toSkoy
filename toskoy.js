@@ -15,6 +15,17 @@ function learnWord(from, to) {
   if (to.length > maxLength) maxLength = to.length
 }
 
+function learnPhrase(original, translated) {
+  original = original.split(',')
+  translated = translated.split(',')
+  if (original.length != translated.length) {
+    throw new Error('count mismatch!')
+  }
+  for (var i = 0; i < original.length; i ++) {
+    learnWord(original[i], translated[i])
+  }
+}
+
 function learn(obj) {
   for (var i in obj) {
     learnWord(i, obj[i])
