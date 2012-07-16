@@ -1,3 +1,4 @@
+(function() {
 var skoyChar = {
   'ู': "ุ๊",
   'ย': 'ญ',
@@ -36,3 +37,4 @@ String.prototype.toSkoy = function () {
   }
   return skoy
 }
+})();
