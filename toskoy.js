@@ -38,7 +38,7 @@ function has(str) {
 
 function get(str) {
   var c = db[str]
-  return c[~~(Math.random() * c)]
+  return c[Math.floor(Math.random() * c)]
 }
 
 learn({
