@@ -6,13 +6,13 @@
   <body style="text-align: center;">
     <script>
       function convert() {
-        document.getElementById('skoy').innerHTML = (document.getElementById('textToSkoy').value).toSkoy();
+        document.getElementById('skoy').innerHTML = (document.getElementById('textToSkoy').value.replace(/\n/g,'<br />')).toSkoy();
       }
     </script>
     <h1>String.toSkoy()</h1>
-    <input type="text" id="textToSkoy"></input>
-    <button onClick="convert();">toSkoy()</button>
-    <span id="skoy"></span>
+    <div><textarea type="text" id="textToSkoy"></textarea></div>
+    <div><button onClick="convert();">toSkoy()</button></div>
+    <div id="skoy"></div>
     <h3><a href="http://github.com/NarzE/toSkoy">source</a></h3>
   </body>
 </html>
