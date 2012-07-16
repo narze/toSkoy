@@ -1,10 +1,18 @@
 <html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script type="text/javascript" src="toskoy.js"></script>
   </head>
-  <body>
+  <body style="text-align: center;">
     <script>
-      alert('สวัสดี นี่คือภาษาสก๊อย -> ' + 'สวัสดี นี่คือภาษาสก๊อย'.toSkoy());
+      function convert() {
+        document.getElementById('skoy').innerHTML = (document.getElementById('textToSkoy').value).toSkoy();
+      }
     </script>
+    <h1>String.toSkoy()</h1>
+    <input type="text" id="textToSkoy"></input>
+    <button onClick="convert();">toSkoy()</button>
+    <span id="skoy"></span>
+    <h3><a href="http://github.com/NarzE/toSkoy">source</a></h3>
   </body>
 </html>
