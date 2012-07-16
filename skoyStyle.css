@@ -1,0 +1,22 @@
+body{
+background-color:#000;
+text-align:center;
+color:#FFF;
+}
+
+.header{
+	width:960px;
+	height:300px;
+	background-image: url(image/skoy.jpg);
+	background-repeat: no-repeat;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.textinput {
+	background-image: url(image/2932_131096406252kx.gif);
+	background-repeat: repeat;
+	width:400px;
+	height:200px;
+	margin:10px 0 10px 0;
+}

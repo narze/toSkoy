@@ -2,17 +2,19 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script type="text/javascript" src="toskoy.js"></script>
-  </head>
-  <body style="text-align: center;">
+    <link rel="stylesheet" type="text/css" href="skoyStyle.css"/>
+  <title>Convert Thai to Skoy </title></head>
+  <body>
     <script>
       function convert() {
         document.getElementById('skoy').innerHTML = (document.getElementById('textToSkoy').value.replace(/\n/g,'<br />')).toSkoy();
       }
     </script>
-    <h1>String.toSkoy()</h1>
-    <div><textarea type="text" id="textToSkoy"></textarea></div>
-    <div><button onClick="convert();">toSkoy()</button></div>
+    <div class="header"></div>
+    <div><textarea type="text" id="textToSkoy" class="textinput"></textarea></div>
+    <div><button onClick="convert();">คลิ๊กกกกซ์</button></div>
     <div id="skoy"></div>
     <h3><a href="http://github.com/NarzE/toSkoy">source</a></h3>
+    <p>many thanks to @dtinth @NarzE</p>
   </body>
 </html>
