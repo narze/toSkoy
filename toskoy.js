@@ -39,6 +39,13 @@ function has(str) {
 function get(str) {
   var c = db[str]
   return c[Math.floor(Math.random() * c.length)]
+function learnShift(from, to) {
+  learnWord(from, from)
+  learnWord(from, to)
+  learnWord(from, to)
+  learnWord(to, to)
+  learnWord(to, to)
+  learnWord(to, from)
 }
 
 learn({
@@ -67,6 +74,17 @@ learn({
   'ัน': 'ัล',
   'วก': '๊ก'
 })
+
+learnWord('อ', 'อ')
+learnWord('อ', 'อ')
+learnWord('อ', 'ฮ')
+
+learnShift('ม', 'ฒ')
+learnShift('พ', 'ภ')
+learnShift('ภ', 'พ')
+learnShift('น', 'ณ')
+learnShift('น', 'ฯ')
+learnShift('ย', 'ญ')
 
 learnPhrase(
   'ส,มา,คม,นิ,ยม,สก๊อย'
