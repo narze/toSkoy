@@ -36,25 +36,46 @@ function has(str) {
   return !!db[str]
 }
 
+var karans = 'ห์,ษ์,ซ์,บ์,ป์,ฌ์'.split(',')
+function karan() {
+  return karans[Math.floor(Math.random() * karans.length)]
+}
+
 function get(str) {
   var c = db[str]
-  return c[Math.floor(Math.random() * c.length)]
+    , result = c[Math.floor(Math.random() * c.length)]
+    , endingPattern = /[ก-ฮ]$/
+  if (result.length > 1) {
+    if (result.match(endingPattern)) {
+      result = result.replace(endingPattern, function(a) {
+        var random = Math.random()
+        if (random < 0.2) return karan() + a
+        if (random < 0.3) return a + karan()
+        return a
+      })
+    }
+  }
+  return result
+}
+
+function learnShift(from, to) {
+  learnWord(from, from)
+  learnWord(from, to)
+  learnWord(from, to)
+  learnWord(to, to)
+  learnWord(to, to)
+  learnWord(to, from)
 }
 
 learn({
   'ู': "ุ๊",
-  'ย': 'ญ',
   'ะ': '๊',
   'ด': 'ฎ',
   'ต': 'ฏ',
   'ข': 'ฆ',
-  'อ': 'ฮ',
   'ท': 'ธ',
   'ี': 'ิ๊',
   '้': '๊',
-  'น': 'ณ',
-  'พ': 'ภ',
-  'ภ': 'พ',
   'า': '๊',
   'ฉ': 'ช๋'
 })
@@ -67,6 +88,22 @@ learn({
   'ัน': 'ัล',
   'วก': '๊ก'
 })
+
+learnWord('อ', 'อ')
+learnWord('อ', 'อ')
+learnWord('อ', 'ฮ')
+
+learnShift('ม', 'ฒ')
+learnShift('พ', 'ภ')
+learnShift('ภ', 'พ')
+learnShift('น', 'ณ')
+learnShift('น', 'ฯ')
+learnShift('ย', 'ญ')
+
+learnPhrase(
+  'ส,มา,คม,นิ,ยม,สก๊อย'
+, 'ษ,ม่,ค่ล์ม,นิ๋,ญฒ,สก๊อย'
+)
 
 learnPhrase(
   'พวก,คุณ,จะ,ว่า,อะ,ไร,ก็,เชิญ,เลย,นะ,พวก,เรา,ไม่,สน,หรอก'
