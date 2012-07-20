@@ -11,4 +11,4 @@ thaiLanguageString.toSkoy()
 
 ### License
 
-[The Unlicense](http://http://unlicense.org/)
+[The Unlicense](http://unlicense.org/)
