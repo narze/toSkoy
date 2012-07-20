@@ -8,3 +8,7 @@ A just-for-fun '[Skoy](http://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%81%E0%B9%8A%
 ### Usage
 
 thaiLanguageString.toSkoy()
+
+### License
+
+[The Unlicense](http://http://unlicense.org/)
