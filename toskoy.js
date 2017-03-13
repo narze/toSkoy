@@ -24,6 +24,15 @@ function learnPhrase(original, translated) {
   for (var i = 0; i < original.length; i ++) {
     learnWord(original[i], translated[i])
   }
+  /*
+  ==This might be a way to retranslate the skoy back to Normal Thai.==
+  * Please include notes on what each function does
+  * So that contribution will be much easier
+  * อะไรเป็นอะไรหว่า ไม่เข้าใจ ;-;
+  * โน้ตไว้หน่อยก็น่าจะดีะครับ ฮือ*/
+  function revPhrase(to, from){
+  learnPhrase(to, from);
+}
 }
 
 function learn(obj) {
@@ -152,3 +161,4 @@ String.prototype.toSkoy = function () {
 }
 
 })()
+
