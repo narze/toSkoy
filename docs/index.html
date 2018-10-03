@@ -1,23 +1,25 @@
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script type="text/javascript" src="https://rawgithub.com/NarzE/toSkoy/master/toskoy.js"></script>
-    <link rel="stylesheet" type="text/css" href="skoyStyle.css"/>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <script type="text/javascript" src="https://rawgithub.com/NarzE/toSkoy/master/toskoy.js"></script>
+  <link rel="stylesheet" type="text/css" href="skoyStyle.css" />
   <title>Convert Thai to Skoy </title>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-33428772-1']);
     _gaq.push(['_trackPageview']);
-    (function() {
+    (function () {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
 </head>
-  <body>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
+
+<body>
+  <div id="fb-root"></div>
+  <script>(function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
@@ -25,27 +27,46 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
-    <script>
-      function convert() {
-        document.getElementById('skoy').innerHTML = (document.getElementById('textToSkoy').value.replace(/\n/g,'<br />')).toSkoy();
-      }
-    </script>
-    <div class="header"></div>
-    <div>
-      <textarea type="text" id="textToSkoy" class="textinput">
+  <script>
+    function convert() {
+      document.getElementById('skoy').innerHTML = (document.getElementById('textToSkoy').value.replace(/\n/g, '<br />')).toSkoy();
+    }
+
+    function copyThat() {
+      var txtValue = document.getElementById('skoy').textContent
+      copyStringToClipboard(txtValue);
+    }
+
+    function copyStringToClipboard(str) {
+      var mockTxtAreaForCopyTxt = document.createElement('textarea');
+      mockTxtAreaForCopyTxt.value = str;
+      mockTxtAreaForCopyTxt.setAttribute('readonly', '');
+      mockTxtAreaForCopyTxt.style = { position: 'absolute', left: '-9999px' };
+      document.body.appendChild(mockTxtAreaForCopyTxt);
+      mockTxtAreaForCopyTxt.select();
+      document.execCommand('copy');
+      document.body.removeChild(mockTxtAreaForCopyTxt);
+    }
+
+  </script>
+  <div class="header"></div>
+  <div>
+    <textarea type="text" id="textToSkoy" class="textinput">
         สก๊อยใดไม่มีรอยไหม้ที่น่อง
         หาใช่สก๊อยแท้ไม่
       </textarea>
-    </div>
-    <div><button onClick="convert();">คลิ๊กกกกซ์</button></div>
-    <div id="skoy"></div>
-    <h5 style="color: black;">By <a href="https://github.com/narze">@narze</a>, <a href="https://github.com/dtinth">@dtinth</a>, <a href="https://github.com/ncpeak">@ncpeak</a> | <a href="https://github.com/narze/toSkoy">fork me on github</a></h5>
-    <h5 style="color: black;"><a href="http://dtinth.github.com/toSkoy/">@dtinth's toSkoy bookmarklet</a></h5>
-    <hr />
-    <p style="color: black;">Skoy language is an extreme kind of <a href="https://th.wikipedia.org/wiki/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%9A%E0%B8%B1%E0%B8%95%E0%B8%B4">Thai-Vibut language</a> that is REALLY BAD to use in real life :(</p>
-    <hr />
-    <h2>Comments</h2>
-    <div class="fb-comments" data-href="http://narze.github.com/toSkoy/" data-num-posts="10" data-width="470"></div>
-  </body>
-</html>
+  </div>
+  <div><button onClick="convert();">คลิ๊กกกกซ์</button></div>
+  <div id="skoy" onClick="copyThat();"></div>
+  <h5 style="color: black;">By <a href="https://github.com/narze">@narze</a>, <a href="https://github.com/dtinth">@dtinth</a>,
+    <a href="https://github.com/ncpeak">@ncpeak</a> | <a href="https://github.com/narze/toSkoy">fork me on github</a></h5>
+  <h5 style="color: black;"><a href="http://dtinth.github.com/toSkoy/">@dtinth's toSkoy bookmarklet</a></h5>
+  <hr />
+  <p style="color: black;">Skoy language is an extreme kind of <a href="https://th.wikipedia.org/wiki/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%9A%E0%B8%B1%E0%B8%95%E0%B8%B4">Thai-Vibut
+      language</a> that is REALLY BAD to use in real life :(</p>
+  <hr />
+  <h2>Comments</h2>
+  <div class="fb-comments" data-href="http://narze.github.com/toSkoy/" data-num-posts="10" data-width="470"></div>
+</body>
 
+</html>
