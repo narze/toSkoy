@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="https://rawgit.com/NarzE/toSkoy/master/toskoy.js"></script>
+    <link rel="stylesheet" type="text/css" href="skoyStyle.css"/>
+  <title>แปลงภาษาไทย เป็นภาษาสก๊อย - Convert Thai to Skoy </title>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33428772-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=390275574368990";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <script>
+      function convert() {
+        var skoyMsg = (document.getElementById('textToSkoy').value.replace(/\n/g,'<br />')).toSkoy();
+        document.getElementById('skoy').innerHTML = skoyMsg;
+        var tweetButton = document.getElementById('tweet-button');
+        tweetButton.src = tweetButton.src.replace(/&text=[^&]+/, "&text=" + encodeURIComponent(skoyMsg.replace(/\<br \/\>/g, '').replace(/(?:(?:^|\n)\s+|\s+(?:$|\n))/g,'').replace(/\s+/g,' ')));
+      }
+    </script>
+    <div class="header"></div>
+    <div>
+      <textarea type="text" id="textToSkoy" class="textinput">
+        สก๊อยใดไม่มีรอยไหม้ที่น่อง
+        หาใช่สก๊อยแท้ไม่
+      </textarea>
+    </div>
+    <div><button onClick="convert();">คลิ๊กกกกซ์</button></div>
+    <div id="skoy"></div>
+
+    <p><a href="http://narze.github.com/lne">New! แอพภาษาlne</a></p>
+    <div>
+      <iframe id="tweet-button" allowtransparency="true" frameborder="0" scrolling="no"
+                  src="http://platform.twitter.com/widgets/tweet_button.html?via=toSkoy&amp;text=แปลงภาษาไทยเป็นภาษาสก๊อย&amp;count=horizontal&amp;url=http%3A%2F%2Fbit.ly%2Fthaitoskoy"
+                  style="width:60px; height:20px;"></iframe>
+    </div>
+    <h5 style="color: black;">By <a href="https://github.com/narze">@narze</a>, <a href="https://github.com/dtinth">@dtinth</a>, <a href="https://github.com/ncpeak">@ncpeak</a> | <a href="https://github.com/narze/toSkoy">fork me on github</a></h5>
+    <h5 style="color: black;"><a href="http://dtinth.github.com/toSkoy/">@dtinth's toSkoy bookmarklet</a></h5>
+    <hr />
+    <a title="ซิมสก๊อย" href="http://bit.ly/simskoy"><img src="http://narze.github.com/simskoy/assets/img/simskoy.png" /><h3>ซิมสก๊อย</h3></a>
+    <hr />
+    <a title="อินษฏ๊เกิร์ฬ" href="http://instagrl.com"><img src="http://distilleryimage8.instagram.com/093d144a929011e1a9f71231382044a1_5.jpg" /><h3>อินษฏ๊เกิร์ฬ</h3></a>
+    <hr />
+    <p style="color: black;">Skoy language is an extreme kind of <a href="https://th.wikipedia.org/wiki/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%9A%E0%B8%B1%E0%B8%95%E0%B8%B4">Thai-Vibut language</a> that is REALLY BAD to use in real life :(</p>
+    <hr />
+    <h2>Comments</h2>
+    <div class="fb-comments" data-href="http://narze.github.com/toSkoy/" data-num-posts="10" data-width="470"></div>
+  </body>
+</html>
+
