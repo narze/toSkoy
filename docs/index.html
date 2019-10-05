@@ -15,7 +15,7 @@
     })();
   </script>
 </head>
-  <body>
+  <body onload="convert();">
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -28,17 +28,32 @@
     <script>
       function convert() {
         document.getElementById('skoy').innerHTML = (document.getElementById('textToSkoy').value.replace(/\n/g,'<br />')).toSkoy();
+        var x = document.getElementById('copyAction');
+        x.style.display = "inline";
+        x.style.textAlign = "center";
       }
+
+      function copy(){
+        var copyText = document.getElementById('skoy').innerText;
+        const el = document.createElement('textarea');
+        el.value = copyText;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+      }
+
     </script>
     <div class="header"></div>
     <div>
-      <textarea type="text" id="textToSkoy" class="textinput">
+      <textarea oninput="convert();" type="text" id="textToSkoy" class="textinput">
         สก๊อยใดไม่มีรอยไหม้ที่น่อง
         หาใช่สก๊อยแท้ไม่
       </textarea>
     </div>
     <div><button onClick="convert();">คลิ๊กกกกซ์</button></div>
-    <div id="skoy"></div>
+    <div id="skoy"></div><br>
+    <div><button id="copyAction" onClick="copy();" hidden>กํฮปปปป</button></div>
     <h5 style="color: black;">By <a href="https://github.com/narze">@narze</a>, <a href="https://github.com/dtinth">@dtinth</a>, <a href="https://github.com/ncpeak">@ncpeak</a> | <a href="https://github.com/narze/toSkoy">fork me on github</a></h5>
     <h5 style="color: black;"><a href="http://dtinth.github.com/toSkoy/">@dtinth's toSkoy bookmarklet</a></h5>
     <hr />
