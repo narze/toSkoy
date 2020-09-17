@@ -217,14 +217,15 @@ exports[`Home page matches snapshot 1`] = `
   font-size: 2rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  background-color: #319795;
+  border: 1px solid;
+  border-color: #E2E8F0;
   color: #fff;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 .emotion-4:hover {
-  background-color: #2C7A7B;
+  background-color: rgba(255,255,255,0.3);
 }
 
 .emotion-4:focus {
@@ -233,7 +234,7 @@ exports[`Home page matches snapshot 1`] = `
 
 .emotion-4:active,
 .emotion-4[data-active=true] {
-  background-color: #285E61;
+  background-color: #E2E8F0;
 }
 
 .emotion-4:disabled,

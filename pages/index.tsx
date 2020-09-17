@@ -63,12 +63,13 @@ export const Home = (): JSX.Element => {
           onCopy={() => setMessage('ก๊อปเร่รฬฬษ์')}
         >
           <Button
+            color="white"
             fontSize="2rem"
             my={4}
             w="100%"
             size="lg"
-            variantColor="teal"
-            variant="solid"
+            variant="outline"
+            _hover={{ bg: 'rgba(255,255,255,0.3)' }}
             data-testid="copy-button"
           >
             {message || 'ก๊อป'}
