@@ -61,6 +61,16 @@ export const Home = (): JSX.Element => {
         </CopyToClipboard>
         <div data-testid="message">{message}</div>
       </div>
+
+      <div css={tw`fixed bottom-0 pb-8 text-center`}>
+        <a
+          href="https://github.com/narze/toSkoy"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+      </div>
     </main>
   )
 }
