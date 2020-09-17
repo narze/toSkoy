@@ -39,13 +39,21 @@ describe('Home page', () => {
     expect(Skoy.convert).toHaveBeenCalledTimes(2)
   })
 
-  it('calls react copy to clipboard when pressing the button', () => {
+  it('calls react copy to clipboard when click the button or output textarea', () => {
+    window.prompt = jest.fn()
+
     const { getByRole, getByTestId } = render(<Home />, {})
 
     fireEvent.click(getByRole('button', { name: 'ก๊อป' }))
-    expect(getByTestId('message')).toHaveTextContent('ก๊อปเร่รฬฬษ์')
+    expect(getByTestId('copy-button')).toHaveTextContent('ก๊อปเร่รฬฬษ์')
 
     fireEvent.keyDown(getByTestId('input'), { key: 'ส', code: 'KeyM' })
-    expect(getByTestId('message')).toBeEmptyDOMElement()
+    expect(getByTestId('copy-button')).toHaveTextContent('ก๊อป')
+
+    fireEvent.click(getByTestId('output'))
+    expect(getByTestId('copy-button')).toHaveTextContent('ก๊อปเร่รฬฬษ์')
+
+    fireEvent.keyDown(getByTestId('input'), { key: 'ส', code: 'KeyM' })
+    expect(getByTestId('copy-button')).toHaveTextContent('ก๊อป')
   })
 })

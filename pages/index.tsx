@@ -26,6 +26,7 @@ export const Home = (): JSX.Element => {
         <h1 css={tw`text-6xl`}>
           toSkoy<span css={tw`text-sm`}>next</span>
         </h1>
+
         <Textarea
           textAlign="center"
           my={4}
@@ -37,15 +38,22 @@ export const Home = (): JSX.Element => {
           placeholder="ภาษาไทย"
           tabIndex={0}
         />
-        <Textarea
-          textAlign="center"
-          my={4}
-          fontSize="2rem"
-          data-testid="output"
-          value={output}
-          isReadOnly={true}
-          placeholder="พ๊ษ๊สก๊อยย์"
-        />
+
+        <CopyToClipboard
+          text={output}
+          onCopy={() => setMessage('ก๊อปเร่รฬฬษ์')}
+        >
+          <Textarea
+            textAlign="center"
+            my={4}
+            fontSize="2rem"
+            data-testid="output"
+            value={output}
+            isReadOnly={true}
+            placeholder="พ๊ษ๊สก๊อยย์"
+          />
+        </CopyToClipboard>
+
         <CopyToClipboard
           text={output}
           onCopy={() => setMessage('ก๊อปเร่รฬฬษ์')}
@@ -57,11 +65,11 @@ export const Home = (): JSX.Element => {
             size="lg"
             variantColor="teal"
             variant="solid"
+            data-testid="copy-button"
           >
-            ก๊อป
+            {message || 'ก๊อป'}
           </Button>
         </CopyToClipboard>
-        <div data-testid="message">{message}</div>
       </div>
 
       <div css={tw`fixed bottom-0 pb-8 text-center`}>

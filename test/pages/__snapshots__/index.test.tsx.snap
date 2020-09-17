@@ -2,7 +2,7 @@
 
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
-  .emotion-5 {
+  .emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20,7 +20,7 @@ exports[`Home page matches snapshot 1`] = `
   text-align: center;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -31,11 +31,15 @@ exports[`Home page matches snapshot 1`] = `
   min-width: 640px:max-width:50%;
 }
 
-.emotion-0 {
+.emotion-1 {
   font-size: 4rem;
 }
 
-.emotion-1 {
+.emotion-0 {
+  font-size: 0.875rem;
+}
+
+.emotion-2 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -69,33 +73,33 @@ exports[`Home page matches snapshot 1`] = `
   margin-bottom: 1rem;
 }
 
-.emotion-1:hover {
+.emotion-2:hover {
   border-color: #CBD5E0;
 }
 
-.emotion-1:focus {
+.emotion-2:focus {
   z-index: 1;
   border-color: #3182ce;
   box-shadow: 0 0 0 1px #3182ce;
 }
 
-.emotion-1:disabled,
-.emotion-1:disabled:focus,
-.emotion-1:disabled:hover,
-.emotion-1[aria-disabled=true],
-.emotion-1[aria-disabled=true]:focus,
-.emotion-1[aria-disabled=true]:hover {
+.emotion-2:disabled,
+.emotion-2:disabled:focus,
+.emotion-2:disabled:hover,
+.emotion-2[aria-disabled=true],
+.emotion-2[aria-disabled=true]:focus,
+.emotion-2[aria-disabled=true]:hover {
   opacity: 0.4;
   cursor: not-allowed;
 }
 
-.emotion-1[aria-invalid=true] {
+.emotion-2[aria-invalid=true] {
   border-color: #e53e3e;
   box-shadow: 0 0 0 1px #e53e3e;
 }
 
-.emotion-1[aria-readonly=true],
-.emotion-1[readonly] {
+.emotion-2[aria-readonly=true],
+.emotion-2[readonly] {
   background-color: transparent;
   box-shadow: none !important;
   -webkit-user-select: all;
@@ -104,7 +108,7 @@ exports[`Home page matches snapshot 1`] = `
   user-select: all;
 }
 
-.emotion-3 {
+.emotion-4 {
   border-radius: 0.25rem;
   font-weight: 600;
   width: 100%;
@@ -145,43 +149,55 @@ exports[`Home page matches snapshot 1`] = `
   margin-bottom: 1rem;
 }
 
-.emotion-3:hover {
+.emotion-4:hover {
   background-color: #2C7A7B;
 }
 
-.emotion-3:focus {
+.emotion-4:focus {
   box-shadow: 0 0 0 3px rgba(66,153,225,0.6);
 }
 
-.emotion-3:active,
-.emotion-3[data-active=true] {
+.emotion-4:active,
+.emotion-4[data-active=true] {
   background-color: #285E61;
 }
 
-.emotion-3:disabled,
-.emotion-3:disabled:focus,
-.emotion-3:disabled:hover,
-.emotion-3[aria-disabled=true],
-.emotion-3[aria-disabled=true]:focus,
-.emotion-3[aria-disabled=true]:hover {
+.emotion-4:disabled,
+.emotion-4:disabled:focus,
+.emotion-4:disabled:hover,
+.emotion-4[aria-disabled=true],
+.emotion-4[aria-disabled=true]:focus,
+.emotion-4[aria-disabled=true]:hover {
   opacity: 0.4;
   cursor: not-allowed;
   box-shadow: none;
 }
 
+.emotion-6 {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
 <main
-    class="emotion-5"
+    class="emotion-7"
   >
     <div
-      class="emotion-4"
+      class="emotion-5"
     >
       <h1
-        class="emotion-0"
+        class="emotion-1"
       >
         toSkoy
+        <span
+          class="emotion-0"
+        >
+          next
+        </span>
       </h1>
       <textarea
-        class="emotion-1"
+        class="emotion-2"
         data-testid="input"
         placeholder="ภาษาไทย"
         tabindex="0"
@@ -190,7 +206,7 @@ exports[`Home page matches snapshot 1`] = `
       </textarea>
       <textarea
         aria-readonly="true"
-        class="emotion-1"
+        class="emotion-2"
         data-testid="output"
         placeholder="พ๊ษ๊สก๊อยย์"
         readonly=""
@@ -198,14 +214,23 @@ exports[`Home page matches snapshot 1`] = `
         ษวัษดลีร์
       </textarea>
       <button
-        class="emotion-3"
+        class="emotion-4"
+        data-testid="copy-button"
         type="button"
       >
         ก๊อป
       </button>
-      <div
-        data-testid="message"
-      />
+    </div>
+    <div
+      class="emotion-6"
+    >
+      <a
+        href="https://github.com/narze/toSkoy"
+        rel="noreferrer"
+        target="_blank"
+      >
+        GitHub
+      </a>
     </div>
   </main>
 </DocumentFragment>
