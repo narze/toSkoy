@@ -318,6 +318,15 @@ exports[`Home page matches snapshot 1`] = `
         Skoy.js
       </a>
     </div>
+    <a
+      class="hundred-days-of-code-ribbon"
+      data-day="100!"
+      href="https://100.narze.vercel.app"
+      rel="noreferrer"
+      target="_blank"
+    >
+      Day 100
+    </a>
   </main>
 </DocumentFragment>
 `;

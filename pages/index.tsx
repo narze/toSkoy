@@ -94,6 +94,16 @@ export const Home = (): JSX.Element => {
           Skoy.js
         </a>
       </div>
+
+      <a
+        className="hundred-days-of-code-ribbon"
+        href="https://100.narze.vercel.app"
+        data-day="100!"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Day 100
+      </a>
     </main>
   )
 }
