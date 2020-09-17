@@ -23,7 +23,9 @@ export const Home = (): JSX.Element => {
       css={tw`flex justify-center items-center min-w-full h-screen text-center`}
     >
       <div css={[tw`flex flex-col`, css`min-width: 640px: max-width: 50%`]}>
-        <h1 css={tw`text-6xl`}>toSkoy</h1>
+        <h1 css={tw`text-6xl`}>
+          toSkoy<span css={tw`text-sm`}>next</span>
+        </h1>
         <Textarea
           textAlign="center"
           my={4}
