@@ -3,7 +3,7 @@ describe('homepage', () => {
     cy.visit('/')
   })
 
-  it('renders heading', () => {
-    cy.findByText(/toSkoy/).should('exist')
+  it('renders name', () => {
+    cy.findAllByText(/toSkoy/).should('exist')
   })
 })
