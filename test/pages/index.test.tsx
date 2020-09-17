@@ -38,4 +38,14 @@ describe('Home page', () => {
     expect(getByTestId('output')).toHaveDisplayValue(['เธฮชื่ฮอ่รั๊ย'])
     expect(Skoy.convert).toHaveBeenCalledTimes(2)
   })
+
+  it('calls react copy to clipboard when pressing the button', () => {
+    const { getByRole, getByTestId } = render(<Home />, {})
+
+    fireEvent.click(getByRole('button', { name: 'ก๊อป' }))
+    expect(getByTestId('message')).toHaveTextContent('ก๊อปเร่รฬฬษ์')
+
+    fireEvent.keyDown(getByTestId('input'), { key: 'ส', code: 'KeyM' })
+    expect(getByTestId('message')).toBeEmptyDOMElement()
+  })
 })

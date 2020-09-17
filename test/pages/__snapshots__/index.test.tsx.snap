@@ -2,7 +2,7 @@
 
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
-  .emotion-4 {
+  .emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20,7 +20,7 @@ exports[`Home page matches snapshot 1`] = `
   text-align: center;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -104,11 +104,76 @@ exports[`Home page matches snapshot 1`] = `
   user-select: all;
 }
 
+.emotion-3 {
+  border-radius: 0.25rem;
+  font-weight: 600;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 1.2;
+  outline: none;
+  height: 3rem;
+  min-width: 3rem;
+  font-size: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: #319795;
+  color: #fff;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.emotion-3:hover {
+  background-color: #2C7A7B;
+}
+
+.emotion-3:focus {
+  box-shadow: 0 0 0 3px rgba(66,153,225,0.6);
+}
+
+.emotion-3:active,
+.emotion-3[data-active=true] {
+  background-color: #285E61;
+}
+
+.emotion-3:disabled,
+.emotion-3:disabled:focus,
+.emotion-3:disabled:hover,
+.emotion-3[aria-disabled=true],
+.emotion-3[aria-disabled=true]:focus,
+.emotion-3[aria-disabled=true]:hover {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
 <main
-    class="emotion-4"
+    class="emotion-5"
   >
     <div
-      class="emotion-3"
+      class="emotion-4"
     >
       <h1
         class="emotion-0"
@@ -132,6 +197,15 @@ exports[`Home page matches snapshot 1`] = `
       >
         ษวัษดลีร์
       </textarea>
+      <button
+        class="emotion-3"
+        type="button"
+      >
+        ก๊อป
+      </button>
+      <div
+        data-testid="message"
+      />
     </div>
   </main>
 </DocumentFragment>
