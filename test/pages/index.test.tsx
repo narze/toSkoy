@@ -5,10 +5,10 @@ import { Home } from '../../pages/index'
 import Skoy from 'skoy'
 
 jest.mock('skoy', () => {
-  return { convert: jest.fn(() => 'สวัศดลียร์') }
+  return { convert: jest.fn(() => 'mocked') }
 })
 
-afterAll(() => {
+afterEach(() => {
   Skoy.convert.mockClear()
 })
 
@@ -28,12 +28,14 @@ describe('Home page', () => {
   it('calls Skoy.convert on input type & change', () => {
     const { getByTestId } = render(<Home />, {})
 
+    Skoy.convert.mockImplementationOnce(() => 'ศ')
     fireEvent.keyDown(getByTestId('input'), { key: 'ส', code: 'KeyM' })
-    expect(getByTestId('output')).toHaveDisplayValue(['สวัศดลียร์'])
+    expect(getByTestId('output')).toHaveDisplayValue(['ศ'])
     expect(Skoy.convert).toHaveBeenCalledTimes(1)
 
-    fireEvent.change(getByTestId('input'), { target: { value: 'สวัสดี' } })
-    expect(getByTestId('output')).toHaveDisplayValue(['สวัศดลียร์'])
-    expect(Skoy.convert).toHaveBeenCalledTimes(1)
+    Skoy.convert.mockImplementationOnce(() => 'เธฮชื่ฮอ่รั๊ย')
+    fireEvent.change(getByTestId('input'), { target: { value: 'เธอชื่ออะไร' } })
+    expect(getByTestId('output')).toHaveDisplayValue(['เธฮชื่ฮอ่รั๊ย'])
+    expect(Skoy.convert).toHaveBeenCalledTimes(2)
   })
 })

@@ -2,8 +2,8 @@
 import { jsx, css } from '@emotion/core'
 import tw from '@tailwindcssinjs/macro'
 import { Textarea } from '@chakra-ui/core'
-import Skoy from 'skoy'
 import { useState } from 'react'
+import Skoy from 'skoy'
 
 export const Home = (): JSX.Element => {
   const [input, setInput] = useState('สวัสดี')
