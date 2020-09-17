@@ -2,11 +2,14 @@ import '@testing-library/jest-dom'
 import React from 'react'
 import { render, fireEvent } from '../testUtils'
 import { Home } from '../../pages/index'
+import Skoy from 'skoy'
 
 jest.mock('skoy', () => {
-  return {
-    convert: jest.fn(() => "สวัศดลียร์")
-  }
+  return { convert: jest.fn(() => 'สวัศดลียร์') }
+})
+
+afterAll(() => {
+  Skoy.convert.mockClear()
 })
 
 describe('Home page', () => {
@@ -15,11 +18,22 @@ describe('Home page', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('calls Skoy.convert on button click', () => {
-    const { getByTestId, getByText } = render(<Home />, {})
+  it('renders default input & output', () => {
+    const { getByTestId } = render(<Home />, {})
 
-    fireEvent.change(getByTestId('input'), { target: { value: "สวัสดี" }})
-    fireEvent.click(getByText('แปลงเป็นภาษาสก๊อย'))
-    expect(getByTestId('output')).toHaveDisplayValue(["สวัศดลียร์"])
+    expect(getByTestId('input')).toHaveDisplayValue(['สวัสดี'])
+    expect(getByTestId('output')).toHaveDisplayValue(['ษวัษดลีร์'])
+  })
+
+  it('calls Skoy.convert on input type & change', () => {
+    const { getByTestId } = render(<Home />, {})
+
+    fireEvent.keyDown(getByTestId('input'), { key: 'ส', code: 'KeyM' })
+    expect(getByTestId('output')).toHaveDisplayValue(['สวัศดลียร์'])
+    expect(Skoy.convert).toHaveBeenCalledTimes(1)
+
+    fireEvent.change(getByTestId('input'), { target: { value: 'สวัสดี' } })
+    expect(getByTestId('output')).toHaveDisplayValue(['สวัศดลียร์'])
+    expect(Skoy.convert).toHaveBeenCalledTimes(1)
   })
 })

@@ -2,12 +2,11 @@
 
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
-  .emotion-3 {
-  margin-top: 2rem;
-  display: grid;
-  grid-gap: 1rem;
-  gap: 1rem;
-  grid-template-columns: repeat(1,minmax(0,1fr));
+  .emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -16,9 +15,27 @@ exports[`Home page matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  min-width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 640px:max-width:50%;
 }
 
 .emotion-0 {
+  font-size: 4rem;
+}
+
+.emotion-1 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -35,7 +52,7 @@ exports[`Home page matches snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-size: 1rem;
+  font-size: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
   height: 2.5rem;
@@ -47,92 +64,19 @@ exports[`Home page matches snapshot 1`] = `
   padding-bottom: 8px;
   min-height: 80px;
   line-height: 1.375;
-}
-
-.emotion-0:hover {
-  border-color: #CBD5E0;
-}
-
-.emotion-0:focus {
-  z-index: 1;
-  border-color: #3182ce;
-  box-shadow: 0 0 0 1px #3182ce;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:focus,
-.emotion-0:disabled:hover,
-.emotion-0[aria-disabled=true],
-.emotion-0[aria-disabled=true]:focus,
-.emotion-0[aria-disabled=true]:hover {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.emotion-0[aria-invalid=true] {
-  border-color: #e53e3e;
-  box-shadow: 0 0 0 1px #e53e3e;
-}
-
-.emotion-0[aria-readonly=true],
-.emotion-0[readonly] {
-  background-color: transparent;
-  box-shadow: none !important;
-  -webkit-user-select: all;
-  -moz-user-select: all;
-  -ms-user-select: all;
-  user-select: all;
-}
-
-.emotion-1 {
-  border-radius: 0.25rem;
-  font-weight: 600;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: all 250ms;
-  transition: all 250ms;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  white-space: nowrap;
-  vertical-align: middle;
-  line-height: 1.2;
-  outline: none;
-  height: 2.5rem;
-  min-width: 2.5rem;
-  font-size: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  background-color: #319795;
-  color: #fff;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .emotion-1:hover {
-  background-color: #2C7A7B;
+  border-color: #CBD5E0;
 }
 
 .emotion-1:focus {
-  box-shadow: 0 0 0 3px rgba(66,153,225,0.6);
-}
-
-.emotion-1:active,
-.emotion-1[data-active=true] {
-  background-color: #285E61;
+  z-index: 1;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 1px #3182ce;
 }
 
 .emotion-1:disabled,
@@ -143,29 +87,51 @@ exports[`Home page matches snapshot 1`] = `
 .emotion-1[aria-disabled=true]:hover {
   opacity: 0.4;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-<main>
+.emotion-1[aria-invalid=true] {
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 1px #e53e3e;
+}
+
+.emotion-1[aria-readonly=true],
+.emotion-1[readonly] {
+  background-color: transparent;
+  box-shadow: none !important;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+
+<main
+    class="emotion-4"
+  >
     <div
       class="emotion-3"
     >
-      <textarea
+      <h1
         class="emotion-0"
-        data-testid="input"
-      />
-      <button
-        class="emotion-1"
-        type="button"
       >
-        แปลงเป็นภาษาสก๊อย
-      </button>
+        toSkoy
+      </h1>
+      <textarea
+        class="emotion-1"
+        data-testid="input"
+        placeholder="ภาษาไทย"
+        tabindex="0"
+      >
+        สวัสดี
+      </textarea>
       <textarea
         aria-readonly="true"
-        class="emotion-0"
+        class="emotion-1"
         data-testid="output"
+        placeholder="พ๊ษ๊สก๊อยย์"
         readonly=""
-      />
+      >
+        ษวัษดลีร์
+      </textarea>
     </div>
   </main>
 </DocumentFragment>
