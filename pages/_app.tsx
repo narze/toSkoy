@@ -12,9 +12,7 @@ export default function App({
   return (
     <>
       <Head>
-        <title>
-          Create Next App - with TypeScript, ESLint, Jest, TailwindCSS, Emotion
-        </title>
+        <title>toSkoy - แปลงภาษาไทยเป็นภาษาสก๊อย</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider theme={theme}>

@@ -487,10 +487,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #a0aec0;
 }
 
-input::-ms-input-placeholder, textarea::-ms-input-placeholder {
-  color: #a0aec0;
-}
-
 input::placeholder,
 textarea::placeholder {
   color: #a0aec0;
@@ -588,4 +584,39 @@ img,
 video {
   max-width: 100%;
   height: auto;
+}
+
+.skoy-bg {
+  background: linear-gradient(219deg, #00ff15, #1100ff, #8d00ff, #ff002b, #8a0042, #fffa00, #007a40);
+  background-size: 1400% 1400%;
+  -webkit-animation: skoyBg 4s ease infinite;
+  animation: skoyBg 4s ease infinite;
+}
+
+@-webkit-keyframes skoyBg {
+  0%{
+    background-position:0% 69%
+  }
+
+  50%{
+    background-position:100% 32%
+  }
+
+  100%{
+    background-position:0% 69%
+  }
+}
+
+@keyframes skoyBg {
+  0%{
+    background-position:0% 69%
+  }
+
+  50%{
+    background-position:100% 32%
+  }
+
+  100%{
+    background-position:0% 69%
+  }
 }

@@ -20,14 +20,16 @@ export const Home = (): JSX.Element => {
 
   return (
     <main
+      className="skoy-bg"
       css={tw`flex justify-center items-center min-w-full h-screen text-center`}
     >
       <div css={[tw`flex flex-col`, css`min-width: 640px: max-width: 50%`]}>
-        <h1 css={tw`text-6xl`}>
+        <h1 css={tw`text-6xl text-white`}>
           toSkoy<span css={tw`text-sm`}>next</span>
         </h1>
 
         <Textarea
+          color="white"
           textAlign="center"
           my={4}
           fontSize="2rem"
@@ -37,6 +39,7 @@ export const Home = (): JSX.Element => {
           onChange={handleInputChange}
           placeholder="ภาษาไทย"
           tabIndex={0}
+          backgroundColor="rgba(0,0,0,0)"
         />
 
         <CopyToClipboard
@@ -44,6 +47,7 @@ export const Home = (): JSX.Element => {
           onCopy={() => setMessage('ก๊อปเร่รฬฬษ์')}
         >
           <Textarea
+            color="white"
             textAlign="center"
             my={4}
             fontSize="2rem"
@@ -72,13 +76,21 @@ export const Home = (): JSX.Element => {
         </CopyToClipboard>
       </div>
 
-      <div css={tw`fixed bottom-0 pb-8 text-center`}>
+      <div css={tw`fixed bottom-0 pb-8 text-center text-white`}>
         <a
           href="https://github.com/narze/toSkoy"
           target="_blank"
           rel="noreferrer"
         >
           GitHub
+        </a>
+        {' - '}
+        <a
+          href="https://github.com/narze/skoy.js"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Skoy.js
         </a>
       </div>
     </main>
