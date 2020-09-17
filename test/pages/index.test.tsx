@@ -1,6 +1,13 @@
+import '@testing-library/jest-dom'
 import React from 'react'
-import { render } from '../testUtils'
+import { render, fireEvent } from '../testUtils'
 import { Home } from '../../pages/index'
+
+jest.mock('skoy', () => {
+  return {
+    convert: jest.fn(() => "สวัศดลียร์")
+  }
+})
 
 describe('Home page', () => {
   it('matches snapshot', () => {
@@ -8,11 +15,11 @@ describe('Home page', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('renders with buttons alert', () => {
-    const { getByText } = render(<Home />, {})
+  it('calls Skoy.convert on button click', () => {
+    const { getByTestId, getByText } = render(<Home />, {})
 
-    getByText('Emotion CSS')
-    getByText('Emotion React')
-    getByText('Chakra-UI')
+    fireEvent.change(getByTestId('input'), { target: { value: "สวัสดี" }})
+    fireEvent.click(getByText('แปลงเป็นภาษาสก๊อย'))
+    expect(getByTestId('output')).toHaveDisplayValue(["สวัศดลียร์"])
   })
 })

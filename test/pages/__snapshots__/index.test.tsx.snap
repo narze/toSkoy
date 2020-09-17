@@ -2,123 +2,7 @@
 
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
-  .emotion-9 {
-  --text-opacity: 1;
-  --bg-opacity: 1;
-  position: relative;
-  width: 16rem;
-  min-width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-width: 1px;
-  border-color: transparent;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 500;
-  border-radius: 0.375rem;
-  color: #ffffff;
-  color: rgba(255,255,255,var(--text-opacity));
-  background-color: #4b5563;
-  background-color: rgba(75,85,99,var(--bg-opacity));
-  -webkit-transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,-webkit-transform;
-  -webkit-transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
-  transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
-  -webkit-transition-duration: 150ms;
-  transition-duration: 150ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-}
-
-.emotion-9:hover {
-  --bg-opacity: 1;
-  background-color: #6b7280;
-  background-color: rgba(107,114,128,var(--bg-opacity));
-}
-
-.emotion-9:focus {
-  --border-opacity: 1;
-  outline: 0;
-  border-color: #374151;
-  border-color: rgba(55,65,81,var(--border-opacity));
-  box-shadow: 0 0 0 3px rgba(159,166,178,0.45);
-}
-
-.emotion-9:active {
-  --bg-opacity: 1;
-  background-color: #374151;
-  background-color: rgba(55,65,81,var(--bg-opacity));
-}
-
-.emotion-8 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-left: 0.75rem;
-}
-
-.emotion-7 {
-  height: 1.25rem;
-  width: 1.25rem;
-  -webkit-transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,-webkit-transform;
-  -webkit-transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
-  transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  -webkit-transition-duration: 150ms;
-  transition-duration: 150ms;
-  color: hotpink;
-}
-
-.group:hover .emotion-7 {
-  --text-opacity: 1;
-  color: #9fa6b2;
-  color: rgba(159,166,178,var(--text-opacity));
-}
-
-.emotion-6 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-  font-size: 1.125rem;
-}
-
-.emotion-0 {
-  --bg-opacity: 1;
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  background-color: #16bdca;
-  background-color: rgba(22,189,202,var(--bg-opacity));
-  border-width: 1px;
-  border-color: transparent;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 500;
-  border-radius: 0.375rem;
-}
-
-.emotion-14 {
+  .emotion-3 {
   margin-top: 2rem;
   display: grid;
   grid-gap: 1rem;
@@ -134,68 +18,8 @@ exports[`Home page matches snapshot 1`] = `
   align-items: center;
 }
 
-.emotion-12 {
-  --text-opacity: 1;
-  --bg-opacity: 1;
-  position: relative;
-  width: 16rem;
-  min-width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-width: 1px;
-  border-color: transparent;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 500;
-  border-radius: 0.375rem;
-  color: #ffffff;
-  color: rgba(255,255,255,var(--text-opacity));
-  background-color: #047481;
-  background-color: rgba(4,116,129,var(--bg-opacity));
-  -webkit-transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,-webkit-transform;
-  -webkit-transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
-  transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
-  -webkit-transition-duration: 150ms;
-  transition-duration: 150ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-}
-
-.emotion-12:hover {
-  --bg-opacity: 1;
-  background-color: #0694a2;
-  background-color: rgba(6,148,162,var(--bg-opacity));
-}
-
-.emotion-12:focus {
-  --border-opacity: 1;
-  outline: 0;
-  border-color: #036672;
-  border-color: rgba(3,102,114,var(--border-opacity));
-  box-shadow: 0 0 0 3px rgba(126,220,226,0.45);
-}
-
-.emotion-12:active {
-  --bg-opacity: 1;
-  background-color: #036672;
-  background-color: rgba(3,102,114,var(--bg-opacity));
-}
-
-.emotion-11 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
+.emotion-0 {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -204,29 +28,63 @@ exports[`Home page matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 0.75rem;
+  position: relative;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid;
+  border-color: inherit;
+  background-color: #fff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  min-height: 80px;
+  line-height: 1.375;
 }
 
-.emotion-10 {
-  height: 1.25rem;
-  width: 1.25rem;
-  -webkit-transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,-webkit-transform;
-  -webkit-transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
-  transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  -webkit-transition-duration: 150ms;
-  transition-duration: 150ms;
-  color: hotpink;
+.emotion-0:hover {
+  border-color: #CBD5E0;
 }
 
-.group:hover .emotion-10 {
-  --text-opacity: 1;
-  color: #16bdca;
-  color: rgba(22,189,202,var(--text-opacity));
+.emotion-0:focus {
+  z-index: 1;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 1px #3182ce;
 }
 
-.emotion-13 {
+.emotion-0:disabled,
+.emotion-0:disabled:focus,
+.emotion-0:disabled:hover,
+.emotion-0[aria-disabled=true],
+.emotion-0[aria-disabled=true]:focus,
+.emotion-0[aria-disabled=true]:hover {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.emotion-0[aria-invalid=true] {
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 1px #e53e3e;
+}
+
+.emotion-0[aria-readonly=true],
+.emotion-0[readonly] {
+  background-color: transparent;
+  box-shadow: none !important;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+
+.emotion-1 {
   border-radius: 0.25rem;
   font-weight: 600;
   display: -webkit-inline-box;
@@ -264,226 +122,51 @@ exports[`Home page matches snapshot 1`] = `
   color: #fff;
 }
 
-.emotion-13:hover {
+.emotion-1:hover {
   background-color: #2C7A7B;
 }
 
-.emotion-13:focus {
+.emotion-1:focus {
   box-shadow: 0 0 0 3px rgba(66,153,225,0.6);
 }
 
-.emotion-13:active,
-.emotion-13[data-active=true] {
+.emotion-1:active,
+.emotion-1[data-active=true] {
   background-color: #285E61;
 }
 
-.emotion-13:disabled,
-.emotion-13:disabled:focus,
-.emotion-13:disabled:hover,
-.emotion-13[aria-disabled=true],
-.emotion-13[aria-disabled=true]:focus,
-.emotion-13[aria-disabled=true]:hover {
+.emotion-1:disabled,
+.emotion-1:disabled:focus,
+.emotion-1:disabled:hover,
+.emotion-1[aria-disabled=true],
+.emotion-1[aria-disabled=true]:focus,
+.emotion-1[aria-disabled=true]:hover {
   opacity: 0.4;
   cursor: not-allowed;
   box-shadow: none;
 }
 
-<div
-    class="jsx-2250570153 container"
-  >
-    <main
-      class="jsx-2250570153"
+<main>
+    <div
+      class="emotion-3"
     >
-      <h1
-        class="jsx-2250570153 title"
+      <textarea
+        class="emotion-0"
+        data-testid="input"
+      />
+      <button
+        class="emotion-1"
+        type="button"
       >
-        Welcome to 
-        <a
-          class="jsx-2250570153"
-          href="https://nextjs.org"
-        >
-          Next.js!
-        </a>
-      </h1>
-      <p
-        class="jsx-2250570153 emotion-6"
-        data-testid="subtitle"
-      >
-        with
-        <span
-          class="jsx-2250570153 emotion-0"
-        >
-          TypeScript
-        </span>
-        <span
-          class="jsx-2250570153 emotion-0"
-        >
-          ESLint
-        </span>
-        <span
-          class="jsx-2250570153 emotion-0"
-        >
-          Jest
-        </span>
-        <span
-          class="jsx-2250570153 emotion-0"
-        >
-          TailwindCSS
-        </span>
-        <span
-          class="jsx-2250570153 emotion-0"
-        >
-          Emotion
-        </span>
-        and
-        <span
-          class="jsx-2250570153 emotion-0"
-        >
-          Cypress
-        </span>
-      </p>
-      <p
-        class="jsx-2250570153 description"
-      >
-        Get started by editing 
-        <code
-          class="jsx-2250570153"
-        >
-          pages/index.tsx
-        </code>
-      </p>
-      <div
-        class="jsx-2250570153 emotion-14"
-      >
-        <button
-          class="emotion-9 group"
-        >
-          <span
-            class="emotion-8"
-          >
-            <svg
-              class="emotion-7"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </span>
-          Emotion CSS
-        </button>
-        <button
-          class="group  emotion-12"
-        >
-          <span
-            class="emotion-11"
-          >
-            <svg
-              class="emotion-10"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </span>
-          Emotion React
-        </button>
-        <button
-          class="emotion-13"
-          type="button"
-        >
-          Chakra-UI
-        </button>
-      </div>
-      <div
-        class="jsx-2250570153 grid"
-      >
-        <a
-          class="jsx-2250570153 card"
-          href="https://nextjs.org/docs"
-        >
-          <h3
-            class="jsx-2250570153"
-          >
-            Documentation →
-          </h3>
-          <p
-            class="jsx-2250570153"
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-        <a
-          class="jsx-2250570153 card"
-          href="https://nextjs.org/learn"
-        >
-          <h3
-            class="jsx-2250570153"
-          >
-            Learn →
-          </h3>
-          <p
-            class="jsx-2250570153"
-          >
-            Learn about Next.js in an interactive course with quizzes!
-          </p>
-        </a>
-        <a
-          class="jsx-2250570153 card"
-          href="https://github.com/vercel/next.js/tree/master/examples"
-        >
-          <h3
-            class="jsx-2250570153"
-          >
-            Examples →
-          </h3>
-          <p
-            class="jsx-2250570153"
-          >
-            Discover and deploy boilerplate example Next.js projects.
-          </p>
-        </a>
-        <a
-          class="jsx-2250570153 card"
-          href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        >
-          <h3
-            class="jsx-2250570153"
-          >
-            Deploy →
-          </h3>
-          <p
-            class="jsx-2250570153"
-          >
-            Instantly deploy your Next.js site to a public URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-    <footer
-      class="jsx-2250570153"
-    >
-      <a
-        class="jsx-2250570153"
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Powered by 
-        <img
-          alt="Vercel Logo"
-          class="jsx-2250570153 logo"
-          src="/vercel.svg"
-        />
-      </a>
-    </footer>
-  </div>
+        แปลงเป็นภาษาสก๊อย
+      </button>
+      <textarea
+        aria-readonly="true"
+        class="emotion-0"
+        data-testid="output"
+        readonly=""
+      />
+    </div>
+  </main>
 </DocumentFragment>
 `;
