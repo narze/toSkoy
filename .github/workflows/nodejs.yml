@@ -36,7 +36,7 @@ jobs:
         name: cypress-videos
         path: cypress/videos
     
-    - run: PATH_PREFIX=toSkoy yarn run build
+    - run: PATH_PREFIX=/toSkoy yarn run build
     - run: yarn run next export
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
