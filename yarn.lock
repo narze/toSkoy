@@ -12072,10 +12072,10 @@ sisteransi@^1.0.4:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
 
-skoy@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/skoy/-/skoy-0.1.0.tgz#d0ead88e79fb9e5e04272a3807d14de99a863214"
-  integrity sha512-gxMM30OaaozSG58G+PVu004kmyGgVS6DBIy2zMqvBhlAhcM7gzqTvb5W00CkAENkIaQivPNVtIJ0u1t+IMTf/g==
+skoy@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/skoy/-/skoy-0.2.1.tgz#e036167b93f5b63bf9a450c5464297771ed816d6"
+  integrity sha512-E1ubCE4MMzk21YK/3UQKbmJchbnDOpGhtfOM/CbXzUqDAY9bjcrowEhoZ+FOiMX0L5odFLelGFiqulg5ExeKCg==
 
 slash@^1.0.0:
   version "1.0.0"
