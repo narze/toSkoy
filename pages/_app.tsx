@@ -1,3 +1,5 @@
+import React from 'react'
+import { GlobalStyles } from 'twin.macro'
 import Head from 'next/head'
 import '../styles/base.css'
 import { ThemeProvider, theme } from '@chakra-ui/core'
@@ -19,6 +21,7 @@ export default function App({
           href="https://cdn.jsdelivr.net/npm/hundred-days-of-code-css-ribbon@v0.1.1/100-days-of-code-ribbon.css"
         ></link>
       </Head>
+      <GlobalStyles />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>

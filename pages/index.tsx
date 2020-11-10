@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
-import tw from '@tailwindcssinjs/macro'
+import tw, { css } from 'twin.macro'
 import { Button, Textarea } from '@chakra-ui/core'
 import { useState } from 'react'
 import Skoy from 'skoy'
