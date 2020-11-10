@@ -8,8 +8,10 @@ jest.mock('skoy', () => {
   return { convert: jest.fn(() => 'mocked') }
 })
 
+const mockSkoyConvert = Skoy.convert as jest.Mock
+
 afterEach(() => {
-  Skoy.convert.mockClear()
+  mockSkoyConvert.mockClear()
 })
 
 describe('Home page', () => {
@@ -28,15 +30,15 @@ describe('Home page', () => {
   it('calls Skoy.convert on input type & change', () => {
     const { getByTestId } = render(<Home />, {})
 
-    Skoy.convert.mockImplementationOnce(() => 'ศ')
+    mockSkoyConvert.mockImplementationOnce(() => 'ศ')
     fireEvent.keyDown(getByTestId('input'), { key: 'ส', code: 'KeyM' })
     expect(getByTestId('output')).toHaveDisplayValue(['ศ'])
-    expect(Skoy.convert).toHaveBeenCalledTimes(1)
+    expect(mockSkoyConvert).toHaveBeenCalledTimes(1)
 
-    Skoy.convert.mockImplementationOnce(() => 'เธฮชื่ฮอ่รั๊ย')
+    mockSkoyConvert.mockImplementationOnce(() => 'เธฮชื่ฮอ่รั๊ย')
     fireEvent.change(getByTestId('input'), { target: { value: 'เธอชื่ออะไร' } })
     expect(getByTestId('output')).toHaveDisplayValue(['เธฮชื่ฮอ่รั๊ย'])
-    expect(Skoy.convert).toHaveBeenCalledTimes(2)
+    expect(mockSkoyConvert).toHaveBeenCalledTimes(2)
   })
 
   it('calls react copy to clipboard when click the button or output textarea', () => {
